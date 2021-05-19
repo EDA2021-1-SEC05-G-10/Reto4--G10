@@ -39,7 +39,7 @@ def printMenu():
     print("1- Inicializar Analizador")
     print("2- Cargar información en el catálogo")
     print("3- Calcular componentes conectados (Req-1)")
-    print("4- Encontrar landing points como punto de interconección (Req-2) ")
+    print("4- Encontrar landing points como punto de interconección (Req-2)")
     print("5- Encontrar ruta mínima entre dos paises (Req-3)")
     print("6- Identificar red de expansión mínima (Req-4)")
     print("7- Encontrar países afectados por caída de un landing point (Req-5)")
@@ -58,6 +58,8 @@ while True:
     printMenu()
     inputs = input('Seleccione una opción para continuar\n')
     if int(inputs[0]) == 1:
+        print("\nInicializando....")
+        cont = controller.init()
         pass
     elif int(inputs[0]) == 2:
         print("Cargando información de los archivos ....")
