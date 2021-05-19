@@ -45,8 +45,11 @@ def printMenu():
     print("7- Encontrar países afectados por caída de un landing point (Req-5)")
     print("0- Salir")
     print("*******************************************")
-    
+
 catalog = None
+
+def opciondos():
+    
 
 """
 Menu principal
