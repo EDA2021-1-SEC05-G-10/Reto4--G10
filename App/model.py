@@ -51,20 +51,20 @@ def newAnalyzer():
     """
     try:
         analyzer = {
-                    'stops': None,
+                    'landing_points': None,
                     'connections': None,
                     'components': None,
                     'paths': None
                     }
 
-        analyzer['stops'] = mp.newMap(numelements=14000,
+        analyzer['landing_points'] = mp.newMap(numelements=14000,
                                      maptype='PROBING',
-                                     comparefunction=compareStopIds)
+                                     comparefunction=comparepointIds)
 
         analyzer['connections'] = gr.newGraph(datastructure='ADJ_LIST',
                                               directed=True,
                                               size=14000,
-                                              comparefunction=compareStopIds)
+                                              comparefunction=comparepointIds)
         return analyzer
     except Exception as exp:
         error.reraise(exp, 'model:newAnalyzer')
@@ -77,14 +77,14 @@ def newAnalyzer():
 
 # Funciones utilizadas para comparar elementos dentro de una lista
 
-def compareStopIds(stop, keyvaluestop):
+def comparepointIds(landing_point, keyvaluestop):
     """
-    Compara dos estaciones
+    Compara dos landing points
     """
     stopcode = keyvaluestop['key']
-    if (stop == stopcode):
+    if (landing_point == stopcode):
         return 0
-    elif (stop > stopcode):
+    elif (landing_point > stopcode):
         return 1
     else:
         return -1
