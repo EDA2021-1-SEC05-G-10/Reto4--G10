@@ -36,9 +36,16 @@ operación solicitada
 
 def printMenu():
     print("Bienvenido")
-    print("1- Cargar información en el catálogo")
-    print("2- ")
-
+    print("1- Inicializar Analizador")
+    print("2- Cargar información en el catálogo")
+    print("3- Calcular componentes conectados (Req-1)")
+    print("4- Encontrar landing points como punto de interconección (Req-2) ")
+    print("5- Encontrar ruta mínima entre dos paises (Req-3)")
+    print("6- Identificar red de expansión mínima (Req-4)")
+    print("7- Encontrar países afectados por caída de un landing point (Req-5)")
+    print("0- Salir")
+    print("*******************************************")
+    
 catalog = None
 
 """
@@ -48,11 +55,27 @@ while True:
     printMenu()
     inputs = input('Seleccione una opción para continuar\n')
     if int(inputs[0]) == 1:
+        pass
+    elif int(inputs[0]) == 2:
         print("Cargando información de los archivos ....")
 
-    elif int(inputs[0]) == 2:
+    elif int(inputs[0]) == 3:
+        pass
+    
+    elif int(inputs[0]) == 4:
+        pass
+
+    elif int(inputs[0]) == 5:
+        pass
+
+    elif int(inputs[0]) == 6:
+        pass
+
+    elif int(inputs[0]) == 1:
         pass
 
     else:
         sys.exit(0)
 sys.exit(0)
+
+
